@@ -1,0 +1,10 @@
+.DS_Store
+.env
+.env.*
+!.env.example
+artifacts/
+coverage/
+node_modules/
+.playwright-cli/
+*.log
+*.pid

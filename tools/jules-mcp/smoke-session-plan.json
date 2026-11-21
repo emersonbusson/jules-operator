@@ -1,0 +1,13 @@
+{
+  "source": "sources/github/emersonbusson/ramshared",
+  "startingBranch": "main",
+  "requirePlanApproval": true,
+  "automationMode": "",
+  "commonPrompt": "Read-only smoke example. Do not edit files, create commits, open pull requests, or perform external mutations.",
+  "sessions": [
+    {
+      "title": "Read-only RamShared smoke example",
+      "prompt": "Return the current starting branch and explain that no repository changes were made."
+    }
+  ]
+}

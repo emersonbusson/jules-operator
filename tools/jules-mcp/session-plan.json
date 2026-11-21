@@ -1,0 +1,49 @@
+{
+  "source": "sources/github/emersonbusson/ramshared",
+  "startingBranch": "main",
+  "requirePlanApproval": true,
+  "automationMode": "",
+  "commonPrompt": "Historical RamShared prompt examples. Jules has been deprecated; review current repository guidance before any use.",
+  "sessions": [
+    {
+      "title": "🧪 [testing: add inline unit tests for n3_state.rs state transitions]",
+      "prompt": "RamShared task example.\nCrate: crates/ramshared-tier\nTarget: crates/ramshared-tier/src/n3_state.rs\nTask: Implement comprehensive test module in n3_state.rs covering initial state, valid tier promotions/demotions, serialization/deserialization, and invalid transition rejection.\nReview current repository guidance before acting. Validate the change with the relevant project tests.",
+      "canaryEligible": false
+    },
+    {
+      "title": "🧪 [testing: add error propagation and timeout tests for nbd_readiness probe]",
+      "prompt": "RamShared task example.\nCrate: crates/ramshared-tier\nTarget: crates/ramshared-tier/src/nbd_readiness.rs\nTask: Add unit tests for NBD readiness probe failure recovery, retry loops, and connection timeout behavior.\nReview current repository guidance before acting. Validate the change with the relevant project tests.",
+      "canaryEligible": false
+    },
+    {
+      "title": "🔌 [ipc-resilience: exponential backoff with jitter on host IPC connection loss]",
+      "prompt": "RamShared task example.\nTarget: crates/ramshared-wsl2d/src/conn.rs\nTask: Implement exponential backoff retry loop with randomized jitter when Windows host pipe disconnects unexpectedly.\nReview current repository guidance before acting. Validate the change with the relevant project tests.",
+      "canaryEligible": false
+    },
+    {
+      "title": "🔌 [ipc-resilience: inflight request queue replay on transparent socket reconnect]",
+      "prompt": "RamShared task example.\nTarget: crates/ramshared-wsl2d/src/conn.rs\nTask: Buffer inflight block requests and replay unacknowledged packets automatically upon successful socket reconnection.\nReview current repository guidance before acting. Validate the change with the relevant project tests.",
+      "canaryEligible": false
+    },
+    {
+      "title": "🧹 [guard_clause(tier): flatten nested if-else in tier demotion cascade with guard clauses]",
+      "prompt": "RamShared task example.\nCrate: crates/ramshared-tier\nTarget: crates/ramshared-tier/src/cascade.rs\nTask: Replace deeply nested if/else blocks in tier demotion cascade with early-return guard clauses checking tier availability and capacity upfront.\nReview current repository guidance before acting. Validate the change with the relevant project tests.",
+      "canaryEligible": false
+    },
+    {
+      "title": "🧹 [guard_clause(tier): early return guard pattern in priority tier evaluation]",
+      "prompt": "RamShared task example.\nCrate: crates/ramshared-tier\nTarget: crates/ramshared-tier/src/priority.rs\nTask: Flatten priority sorting and tier matching into linear guard checks returning early when tier constraints are unmet.\nReview current repository guidance before acting. Validate the change with the relevant project tests.",
+      "canaryEligible": false
+    },
+    {
+      "title": "🪟 [ps1-windows: add CmdletBinding with ValidateSet and guard clauses on VM prerequisites]",
+      "prompt": "RamShared task example.\nTarget: scripts/windows/Run-GuestExhaustive.ps1\nTask: Add [CmdletBinding()] with parameter validation, early guard exits checking Hyper-V module availability and VM existence.\nReview current repository guidance before acting. Validate the change with the relevant project tests.",
+      "canaryEligible": false
+    },
+    {
+      "title": "🪟 [ps1-windows: sanitize CIM/WMI query parameters to prevent injection]",
+      "prompt": "RamShared task example.\nTarget: scripts/windows/Run-GuestExhaustive.ps1\nTask: Escape and validate all string parameters used in Get-CimInstance WQL queries to prevent CIM injection.\nReview current repository guidance before acting. Validate the change with the relevant project tests.",
+      "canaryEligible": false
+    }
+  ]
+}
